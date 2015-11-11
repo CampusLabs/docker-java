@@ -1,7 +1,7 @@
 FROM quay.io/orgsync/base:1.0.0
 MAINTAINER Joshua Griffith <joshua@orgsync.com>
 
-ENV JAVA_VERSION 1.8.0
+ENV JAVA_VERSION 8u66+8u65arm-1~webupd8~1
 
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
       | tee /etc/apt/sources.list.d/webupd8team-java.list \
@@ -12,8 +12,7 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
         | /usr/bin/debconf-set-selections \
     && apt-get update \
     && apt-get install -y \
-        python-software-properties=0.82.7.1debian1 \
-        oracle-java8-installer=8u45+8u33arm-1~webupd8~0 \
+        oracle-java8-installer=$JAVA_VERSION \
     && update-alternatives --display java \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
