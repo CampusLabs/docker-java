@@ -1,4 +1,4 @@
-FROM orgsync/base
+FROM quay.io/orgsync/base
 MAINTAINER Clifton King <cliftonk@gmail.com>
 
 ENV JAVA_VERSION 1.8.0
