@@ -1,4 +1,4 @@
-FROM quay.io/orgsync/base
+FROM quay.io/orgsync/base:1.0.0
 MAINTAINER Joshua Griffith <joshua@orgsync.com>
 
 ENV JAVA_VERSION 1.8.0
