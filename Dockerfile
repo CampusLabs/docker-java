@@ -1,5 +1,5 @@
-FROM quay.io/orgsync/base:1.0.0
-MAINTAINER Joshua Griffith <joshua@orgsync.com>
+FROM quay.io/orgsync/base:1.1.0
+MAINTAINER Matt Tarantino <mtarantino@campuslabs.com>
 
 ENV JAVA_VERSION 8u66+8u65arm-1~webupd8~1
 
